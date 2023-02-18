@@ -29,13 +29,16 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit( { attributes } ) {
 	return (
-		<p { ...useBlockProps() }>
+		<div { ...useBlockProps() }>
+			<p>
 			{ __(
 				'Fundraising Progress',
 				'gfib-fund-prog'
 			) }
-		</p>
+			</p>
+			<p>captionText is { attributes.captionText }</p>
+		</div>
 	);
 }

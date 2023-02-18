@@ -51,8 +51,11 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @return {WPElement} Element to render.
  */
-function Edit() {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Fundraising Progress', 'gfib-fund-prog'));
+function Edit(_ref) {
+  let {
+    attributes
+  } = _ref;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Fundraising Progress', 'gfib-fund-prog')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "captionText is ", attributes.captionText));
 }
 
 /***/ }),
@@ -102,6 +105,26 @@ __webpack_require__.r(__webpack_exports__);
   /**
    * @see ./edit.js
    */
+  attributes: {
+    barColor: {
+      type: 'string'
+    },
+    customBarColor: {
+      type: 'string'
+    },
+    captionText: {
+      type: 'string'
+    },
+    countDonations: {
+      type: 'string'
+    },
+    countProgress: {
+      type: 'string'
+    },
+    countGoal: {
+      type: 'string'
+    }
+  },
   edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
   /**
    * @see ./save.js
@@ -219,7 +242,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/gfib-fund-prog","version":"0.1.0","title":"Fundraising Progress","category":"widgets","icon":"smiley","description":"Add a horizontal fundraising progress bar.","supports":{"html":false},"textdomain":"gfib-fund-prog","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"create-block/gfib-fund-prog","version":"0.1.0","title":"Fundraising Progress","category":"widgets","icon":"money-alt","description":"Add a horizontal fundraising progress bar.","supports":{"html":false},"textdomain":"gfib-fund-prog","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

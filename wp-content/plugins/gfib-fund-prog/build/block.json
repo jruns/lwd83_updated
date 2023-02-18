@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "title": "Fundraising Progress",
   "category": "widgets",
-  "icon": "smiley",
+  "icon": "money-alt",
   "description": "Add a horizontal fundraising progress bar.",
   "supports": {
     "html": false

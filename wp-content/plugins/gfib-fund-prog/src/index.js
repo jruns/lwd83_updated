@@ -30,6 +30,26 @@ registerBlockType( metadata.name, {
 	/**
 	 * @see ./edit.js
 	 */
+	attributes: {
+		barColor: {
+			type: 'string',
+		},
+		customBarColor: {
+			type: 'string',
+		},
+		captionText: {
+			type: 'string',
+		},
+		countDonations: {
+			type: 'string',
+		},
+		countProgress: {
+			type: 'string',
+		},
+		countGoal: {
+			type: 'string',
+		}
+	},
 	edit: Edit,
 
 	/**
