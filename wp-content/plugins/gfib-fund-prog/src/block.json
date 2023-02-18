@@ -3,10 +3,10 @@
 	"apiVersion": 2,
 	"name": "create-block/gfib-fund-prog",
 	"version": "0.1.0",
-	"title": "Gfib Fund Prog",
+	"title": "Fundraising Progress",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Add a horizontal fundraising progress bar.",
 	"supports": {
 		"html": false
 	},
