@@ -18,7 +18,7 @@ import { useBlockProps } from '@wordpress/block-editor';
 export default function save() {
 	return (
 		<p { ...useBlockProps.save() }>
-			{ 'Gfib Fund Prog – hello from the saved content!' }
+			{ 'Fundraising Progress' }
 		</p>
 	);
 }

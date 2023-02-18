@@ -33,7 +33,7 @@ export default function Edit() {
 	return (
 		<p { ...useBlockProps() }>
 			{ __(
-				'Gfib Fund Prog – hello from the editor!',
+				'Fundraising Progress',
 				'gfib-fund-prog'
 			) }
 		</p>
