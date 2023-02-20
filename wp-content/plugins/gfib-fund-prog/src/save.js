@@ -21,6 +21,14 @@ export default function save( { attributes } ) {
 	return (
 		<div { ...blockProps }>
 			<span class="gfib-donations">{ attributes.donations }</span>
+
+			<div class="goal-bar">
+				<div class="progress-bar" style={ {
+					backgroundColor: attributes.barColor,
+					width: `calc(100% * ( ${attributes.progress.replace(/[^\d.-]/g, '')} / ${attributes.goal.replace(/[^\d.-]/g, '')} ))`
+				} }></div>
+			</div>
+			{ attributes.progress } of { attributes.goal } (from { attributes.donations } donations)
 		</div>
 	);
 }
