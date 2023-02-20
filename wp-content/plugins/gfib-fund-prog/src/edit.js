@@ -14,7 +14,10 @@ import { TextControl } from '@wordpress/components';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import {
+	useBlockProps,
+	InspectorControls,
+} from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -37,6 +40,19 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<div { ...blockProps }>
+			<InspectorControls key="setting">
+				<div id="gfib-fund-prog-controls">
+					<fieldset>
+						<legend className="blocks-base-control__label">
+							{ __( 'Donations', 'gfib-fund-prog' ) }
+						</legend>
+						<TextControl
+							value={ attributes.donations }
+							onChange={ ( value ) => setAttributes( { donations: parseInt( value ) } ) }
+						/>
+					</fieldset>
+				</div>
+			</InspectorControls>
 			<TextControl
                 label='Donations'
                 value={ attributes.donations }
