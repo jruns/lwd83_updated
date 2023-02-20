@@ -5,6 +5,9 @@
  */
 import { __ } from '@wordpress/i18n';
 
+// Import components
+import { TextControl } from '@wordpress/components';
+
 /**
  * React hook that is used to mark the block wrapper element.
  * It provides all the necessary props like the class name.
@@ -29,16 +32,16 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit( { attributes } ) {
+export default function Edit( { attributes, setAttributes } ) {
+	const blockProps = useBlockProps();
+
 	return (
-		<div { ...useBlockProps() }>
-			<p>
-			{ __(
-				'Fundraising Progress',
-				'gfib-fund-prog'
-			) }
-			</p>
-			<p>captionText is { attributes.captionText }</p>
+		<div { ...blockProps }>
+			<TextControl
+                label='Donations'
+                value={ attributes.donations }
+                onChange={ ( value ) => setAttributes( { donations: parseInt( value ) } ) }
+            />
 		</div>
 	);
 }

@@ -40,8 +40,10 @@ registerBlockType( metadata.name, {
 		captionText: {
 			type: 'string',
 		},
-		countDonations: {
+		donations: {
 			type: 'string',
+			source: 'text',
+			selector: 'span.gfib-donations',
 		},
 		countProgress: {
 			type: 'string',
