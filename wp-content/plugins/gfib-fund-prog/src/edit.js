@@ -36,7 +36,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						</legend>
 						<TextControl
 							value={ attributes.progress }
-							onChange={ ( value ) => setAttributes( { progress: parseFloat( value ) } ) }
+							onChange={ ( value ) => setAttributes( { progress: value } ) }
 						/>
 					</fieldset>
 					<fieldset>
@@ -45,7 +45,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						</legend>
 						<TextControl
 							value={ attributes.goal }
-							onChange={ ( value ) => setAttributes( { goal: parseFloat( value ) } ) }
+							onChange={ ( value ) => setAttributes( { goal: value } ) }
 						/>
 					</fieldset>
 				</div>
