@@ -9,5 +9,13 @@
 .wp-block-create-block-gfib-fund-prog {
   border: 1px dotted #f00;
 }
+.wp-block-create-block-gfib-fund-prog .goal-bar {
+  max-width: 300px;
+  height: 22px;
+  background-color: #f4f5f5;
+}
+.wp-block-create-block-gfib-fund-prog .goal-bar .progress-bar {
+  height: 100%;
+}
 
 /*# sourceMappingURL=index.css.map*/

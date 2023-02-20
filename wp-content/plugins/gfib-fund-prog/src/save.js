@@ -15,10 +15,20 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save( { attributes } ) {
+	const blockProps = useBlockProps.save();
+
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Fundraising Progress' }
-		</p>
+		<div { ...blockProps }>
+			<span>{ attributes.captionText }</span>
+
+			<div class="goal-bar">
+				<div class="progress-bar" style={ {
+					backgroundColor: attributes.barColor,
+					width: `calc(100% * ( ${attributes.progress.replace(/[^\d.-]/g, '')} / ${attributes.goal.replace(/[^\d.-]/g, '')} ))`
+				} }></div>
+			</div>
+			{ attributes.progress } of { attributes.goal } (from { attributes.donations } donations)
+		</div>
 	);
 }

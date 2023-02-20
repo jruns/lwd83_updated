@@ -6,7 +6,15 @@
  */
 
 .wp-block-create-block-gfib-fund-prog {
-	background-color: #21759b;
-	color: #fff;
 	padding: 2px;
+
+	.goal-bar {
+		max-width: 300px;
+		height: 22px;
+		background-color: #f4f5f5;
+
+		.progress-bar {
+			height: 100%
+		}
+	}
 }

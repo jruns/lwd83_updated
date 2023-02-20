@@ -33,20 +33,18 @@ registerBlockType( metadata.name, {
 	attributes: {
 		barColor: {
 			type: 'string',
-		},
-		customBarColor: {
-			type: 'string',
+			default: '#fade00',
 		},
 		captionText: {
 			type: 'string',
 		},
-		countDonations: {
+		donations: {
 			type: 'string',
 		},
-		countProgress: {
+		progress: {
 			type: 'string',
 		},
-		countGoal: {
+		goal: {
 			type: 'string',
 		}
 	},
