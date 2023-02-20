@@ -8,9 +8,15 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-create-block-gfib-fund-prog {
-  background-color: #21759b;
-  color: #fff;
   padding: 2px;
+}
+.wp-block-create-block-gfib-fund-prog .goal-bar {
+  max-width: 300px;
+  height: 22px;
+  background-color: #f4f5f5;
+}
+.wp-block-create-block-gfib-fund-prog .goal-bar .progress-bar {
+  height: 100%;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

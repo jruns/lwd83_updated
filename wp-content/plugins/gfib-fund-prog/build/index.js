@@ -197,7 +197,15 @@ function save(_ref) {
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save();
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     class: "gfib-donations"
-  }, attributes.donations));
+  }, attributes.donations), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "goal-bar"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    class: "progress-bar",
+    style: {
+      backgroundColor: attributes.barColor,
+      width: `calc(100% * ( ${attributes.progress.replace(/[^\d.-]/g, '')} / ${attributes.goal.replace(/[^\d.-]/g, '')} ))`
+    }
+  })), attributes.progress, " of ", attributes.goal, " (from ", attributes.donations, " donations)");
 }
 
 /***/ }),
