@@ -20,7 +20,7 @@ export default function save( { attributes } ) {
 
 	return (
 		<div { ...blockProps }>
-			<span class="gfib-donations">{ attributes.donations }</span>
+			<span>{ attributes.captionText }</span>
 
 			<div class="goal-bar">
 				<div class="progress-bar" style={ {

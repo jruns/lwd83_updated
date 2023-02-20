@@ -23,6 +23,15 @@ export default function Edit( { attributes, setAttributes } ) {
 				<div id="gfib-fund-prog-controls">
 					<fieldset>
 						<legend className="blocks-base-control__label">
+							{ __( 'Caption Text', 'gfib-fund-prog' ) }
+						</legend>
+						<TextControl
+							value={ attributes.captionText }
+							onChange={ ( value ) => setAttributes( { captionText: value } ) }
+						/>
+					</fieldset>
+					<fieldset>
+						<legend className="blocks-base-control__label">
 							{ __( 'Donations', 'gfib-fund-prog' ) }
 						</legend>
 						<TextControl
@@ -67,11 +76,16 @@ export default function Edit( { attributes, setAttributes } ) {
 						</PanelRow>
 				</PanelBody>
 			</InspectorControls>
-			<TextControl
-                label='Donations'
-                value={ attributes.donations }
-                onChange={ ( value ) => setAttributes( { donations: parseInt( value ) } ) }
-            />
+			
+			<span>{ attributes.captionText }</span>
+
+			<div class="goal-bar">
+				<div class="progress-bar" style={ {
+					backgroundColor: attributes.barColor,
+					width: `calc(100% * ( ${attributes.progress.replace(/[^\d.-]/g, '')} / ${attributes.goal.replace(/[^\d.-]/g, '')} ))`
+				} }></div>
+			</div>
+			{ attributes.progress } of { attributes.goal } (from { attributes.donations } donations)
 		</div>
 	);
 }
