@@ -33,9 +33,7 @@ registerBlockType( metadata.name, {
 	attributes: {
 		barColor: {
 			type: 'string',
-		},
-		customBarColor: {
-			type: 'string',
+			default: '#fade00',
 		},
 		captionText: {
 			type: 'string',

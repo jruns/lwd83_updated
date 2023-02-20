@@ -10,6 +10,7 @@ import { TextControl } from '@wordpress/components';
 import {
 	useBlockProps,
 	InspectorControls,
+    ColorPalette,
 } from '@wordpress/block-editor';
 
 import './editor.scss';
@@ -28,6 +29,15 @@ export default function Edit( { attributes, setAttributes } ) {
 						<TextControl
 							value={ attributes.donations }
 							onChange={ ( value ) => setAttributes( { donations: parseInt( value ) } ) }
+						/>
+					</fieldset>
+					<fieldset>
+						<legend className="blocks-base-control__label">
+							{ __( 'Bar color', 'gfib-fund-prog' ) }
+						</legend>
+						<ColorPalette
+							value={ attributes.barColor }
+							onChange={ ( hexColor ) => setAttributes( { barColor: hexColor } ) }
 						/>
 					</fieldset>
 				</div>
