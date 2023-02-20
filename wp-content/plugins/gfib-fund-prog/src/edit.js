@@ -33,6 +33,24 @@ export default function Edit( { attributes, setAttributes } ) {
 					</fieldset>
 					<fieldset>
 						<legend className="blocks-base-control__label">
+							{ __( 'Progress', 'gfib-fund-prog' ) }
+						</legend>
+						<TextControl
+							value={ attributes.progress }
+							onChange={ ( value ) => setAttributes( { progress: parseFloat( value ) } ) }
+						/>
+					</fieldset>
+					<fieldset>
+						<legend className="blocks-base-control__label">
+							{ __( 'Goal', 'gfib-fund-prog' ) }
+						</legend>
+						<TextControl
+							value={ attributes.goal }
+							onChange={ ( value ) => setAttributes( { goal: parseFloat( value ) } ) }
+						/>
+					</fieldset>
+					<fieldset>
+						<legend className="blocks-base-control__label">
 							{ __( 'Bar color', 'gfib-fund-prog' ) }
 						</legend>
 						<ColorPalette

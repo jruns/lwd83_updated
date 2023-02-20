@@ -43,10 +43,10 @@ registerBlockType( metadata.name, {
 			source: 'text',
 			selector: 'span.gfib-donations',
 		},
-		countProgress: {
+		progress: {
 			type: 'string',
 		},
-		countGoal: {
+		goal: {
 			type: 'string',
 		}
 	},
