@@ -5,12 +5,11 @@
  */
 import { __ } from '@wordpress/i18n';
 
-import { TextControl } from '@wordpress/components';
+import { TextControl, PanelBody, PanelRow, ColorPicker, } from '@wordpress/components';
 
 import {
 	useBlockProps,
 	InspectorControls,
-    ColorPalette,
 } from '@wordpress/block-editor';
 
 import './editor.scss';
@@ -49,16 +48,24 @@ export default function Edit( { attributes, setAttributes } ) {
 							onChange={ ( value ) => setAttributes( { goal: parseFloat( value ) } ) }
 						/>
 					</fieldset>
-					<fieldset>
-						<legend className="blocks-base-control__label">
-							{ __( 'Bar color', 'gfib-fund-prog' ) }
-						</legend>
-						<ColorPalette
-							value={ attributes.barColor }
-							onChange={ ( hexColor ) => setAttributes( { barColor: hexColor } ) }
-						/>
-					</fieldset>
 				</div>
+				<PanelBody
+						title="Color Settings"
+						initialOpen={false}
+					>
+						<PanelRow>
+							<fieldset>
+								<legend className="blocks-base-control__label">
+									{ __( 'Bar color', 'gfib-fund-prog' ) }
+								</legend>
+								<ColorPicker
+									color={ attributes.barColor }
+									onChangeComplete={ ( value ) => setAttributes( { barColor: value.hex } ) }
+									disableAlpha
+								/>
+							</fieldset>
+						</PanelRow>
+				</PanelBody>
 			</InspectorControls>
 			<TextControl
                 label='Donations'
