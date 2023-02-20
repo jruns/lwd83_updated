@@ -36,7 +36,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						</legend>
 						<TextControl
 							value={ attributes.donations }
-							onChange={ ( value ) => setAttributes( { donations: parseInt( value ) } ) }
+							onChange={ ( value ) => setAttributes( { donations: value } ) }
 						/>
 					</fieldset>
 					<fieldset>
